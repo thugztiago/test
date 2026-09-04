@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jane Doe — ML Engineer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+      colors: { base: '#0b0f19', card: '#131a2a', accent: '#7c6cf6', accent2: '#4dd4c8' },
+    },
+  },
+};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  ::selection { background: #7c6cf6; color: white; }
+  .glow {
+    background: radial-gradient(600px circle at 20% 10%, rgba(124,108,246,.18), transparent 60%),
+                radial-gradient(600px circle at 80% 30%, rgba(77,212,200,.12), transparent 60%);
+  }
+  .card-hover { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .card-hover:hover { transform: translateY(-4px); border-color: rgba(124,108,246,.6); box-shadow: 0 12px 40px rgba(124,108,246,.15); }
+</style>
+</head>
+<body class="bg-base text-slate-200 font-sans antialiased">
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 backdrop-blur bg-base/70 border-b border-white/5">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="font-extrabold tracking-tight text-lg">jd<span class="text-accent">.</span>dev</a>
+    <div class="hidden sm:flex gap-7 text-sm text-slate-400">
+      <a href="#about" class="hover:text-white transition">About</a>
+      <a href="#projects" class="hover:text-white transition">Projects</a>
+      <a href="#writing" class="hover:text-white transition">Writing</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </div>
+    <a href="#contact" class="text-sm font-semibold px-4 py-2 rounded-full bg-accent hover:bg-indigo-500 transition text-white">Say hi</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="glow">
+  <div class="max-w-5xl mx-auto px-6 pt-24 pb-28">
+    <div class="inline-flex items-center gap-2 text-xs font-medium text-accent2 border border-accent2/30 rounded-full px-3 py-1 mb-6">
+      <span class="w-2 h-2 rounded-full bg-accent2 animate-pulse"></span> Open to new opportunities
+    </div>
+    <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+      Jane Doe<span class="text-accent">.</span><br />
+      <span class="text-slate-400 text-3xl sm:text-4xl font-semibold">Machine Learning Engineer &amp; builder of useful things.</span>
+    </h1>
+    <p class="mt-6 max-w-xl text-slate-400 leading-relaxed">
+      This is a test site with placeholder content. Replace it with your own bio, links, and projects — the layout is ready to go.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#projects" class="px-5 py-3 rounded-xl bg-accent hover:bg-indigo-500 transition font-semibold text-sm">View my work</a>
+      <a href="#contact" class="px-5 py-3 rounded-xl border border-white/10 hover:border-accent/60 transition font-semibold text-sm">Get in touch</a>
+    </div>
+    <!-- social links -->
+    <div class="mt-10 flex gap-4 text-slate-500">
+      <a href="https://github.com/your-handle" class="hover:text-white transition" title="GitHub">🐙 GitHub</a>
+      <a href="https://linkedin.com/in/your-handle" class="hover:text-white transition" title="LinkedIn">💼 LinkedIn</a>
+      <a href="https://huggingface.co/your-handle" class="hover:text-white transition" title="Hugging Face">🤗 Hugging Face</a>
+      <a href="mailto:you@example.com" class="hover:text-white transition" title="Email">✉️ Email</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-6">About</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="md:col-span-2 text-slate-400 leading-relaxed space-y-4">
+      <p>Short bio goes here. A couple of sentences about who you are, what you work on, and what excites you. Keep it human — this is the part people actually read.</p>
+      <p>Second paragraph: background, current focus, or a fun fact. Swap this placeholder text with your story.</p>
+    </div>
+    <div class="space-y-4">
+      <div class="rounded-2xl border border-white/10 bg-card p-5">
+        <div class="text-xs uppercase tracking-wider text-slate-500 mb-3">Focus areas</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-3 py-1 rounded-full bg-accent/15 text-accent">Machine Learning</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-accent/15 text-accent">Python</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-accent2/15 text-accent2">LLMs</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-accent2/15 text-accent2">Web</span>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-card p-5">
+        <div class="text-xs uppercase tracking-wider text-slate-500 mb-2">Currently</div>
+        <p class="text-sm text-slate-300">📍 Somewhere on Earth · building cool things</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-8">Projects</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- project card template -->
+    <a href="#" class="card-hover block rounded-2xl border border-white/10 bg-card p-6">
+      <div class="text-2xl mb-3">🧠</div>
+      <h3 class="font-semibold text-white">Project One</h3>
+      <p class="mt-2 text-sm text-slate-400 leading-relaxed">One-line description of what this project does and why it matters.</p>
+      <div class="mt-4 flex gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-white/5">Python</span><span class="px-2 py-1 rounded bg-white/5">PyTorch</span></div>
+    </a>
+    <a href="#" class="card-hover block rounded-2xl border border-white/10 bg-card p-6">
+      <div class="text-2xl mb-3">🛠️</div>
+      <h3 class="font-semibold text-white">Project Two</h3>
+      <p class="mt-2 text-sm text-slate-400 leading-relaxed">One-line description of what this project does and why it matters.</p>
+      <div class="mt-4 flex gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-white/5">React</span><span class="px-2 py-1 rounded bg-white/5">Tailwind</span></div>
+    </a>
+    <a href="#" class="card-hover block rounded-2xl border border-white/10 bg-card p-6">
+      <div class="text-2xl mb-3">📊</div>
+      <h3 class="font-semibold text-white">Project Three</h3>
+      <p class="mt-2 text-sm text-slate-400 leading-relaxed">One-line description of what this project does and why it matters.</p>
+      <div class="mt-4 flex gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-white/5">SQL</span><span class="px-2 py-1 rounded bg-white/5">DBT</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-8">Writing</h2>
+  <div class="space-y-4">
+    <a href="#" class="card-hover block rounded-2xl border border-white/10 bg-card p-5 flex items-center justify-between gap-4">
+      <div><h3 class="font-medium text-white">A placeholder blog post title</h3><p class="text-sm text-slate-500">Jan 2026 · 5 min read</p></div>
+      <span class="text-slate-500">→</span>
+    </a>
+    <a href="#" class="card-hover block rounded-2xl border border-white/10 bg-card p-5 flex items-center justify-between gap-4">
+      <div><h3 class="font-medium text-white">Another one, to show the layout</h3><p class="text-sm text-slate-500">Dec 2025 · 3 min read</p></div>
+      <span class="text-slate-500">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-5xl mx-auto px-6 py-20">
+  <div class="rounded-3xl border border-white/10 bg-card glow p-10 text-center">
+    <h2 class="text-3xl font-bold">Let's build something.</h2>
+    <p class="mt-3 text-slate-400">Whether it's a project, a job, or just a hello — my inbox is open.</p>
+    <a href="mailto:you@example.com" class="mt-6 inline-block px-6 py-3 rounded-xl bg-accent hover:bg-indigo-500 transition font-semibold text-sm">you@example.com</a>
+  </div>
+</section>
+
+<footer class="border-t border-white/5">
+  <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+    <span>© 2026 Jane Doe. Test site.</span>
+    <a href="#top" class="hover:text-white transition">Back to top ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>
